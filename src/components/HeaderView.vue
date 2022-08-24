@@ -180,17 +180,17 @@ export default {
 }
 
 .icon-bg {
-  background: url('../assets/images/sns_blog.png') no-repeat center;
+  background: url('@/assets/images/sns_blog.png') no-repeat center;
   background-size: cover;
 }
 
 .icon-is {
-  background: url('../assets/images/sns_insta.png') no-repeat center;
+  background: url('@/assets/images/sns_insta.png') no-repeat center;
   background-size: cover;
 }
 
 .icon-fb {
-  background: url('../assets/images/sns_facebook.png') no-repeat center;
+  background: url('@/assets/images/sns_facebook.png') no-repeat center;
   background-size: cover;
 }
 
@@ -239,9 +239,12 @@ export default {
   padding: 0 40px;
 
 }
+.menu>li:first-child {
+  padding-left: 0;
+}
 
 .menu>li:last-child {
-  margin-right: 0;
+  padding-right: 0;
 }
 
 .menu>li>a {
@@ -270,9 +273,7 @@ export default {
   font-size: 14px;
   color: #999;
 }
-</style>
 
-<style>
 @media all and (max-width:1080px) {
   .menu>li {
     padding: 0 30px;
@@ -315,15 +316,20 @@ export default {
     top: 50%;
     transform: translate(-50%, -50%);
   }
+
   .header-top {
     display: none;
   }
+
   .header-main {
     height: 81px;
   }
+
   .gnb {
     display: none;
   }
 
 }
 </style>
+
+

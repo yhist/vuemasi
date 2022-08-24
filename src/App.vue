@@ -16,7 +16,7 @@
 <script>
 import GoTop from '@/components/GoTop.vue'
 import MobilMenu from '@/components/MobilMenu.vue'
-import FixMenu from './components/FixMenu.vue'
+import FixMenu from '@/components/FixMenu.vue'
 import HeaderView from '@/components/HeaderView.vue'
 import VisualView from '@/components/VisualView.vue'
 import ItemView from '@/components/ItemView.vue'
@@ -100,9 +100,6 @@ body {
   width: 100%;
   clear: both;
 }
-
-
-
 
 /* layout */
 .wrap {

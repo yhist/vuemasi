@@ -1,61 +1,51 @@
 <template>
   <section class="visual">
-    <Swiper class="sw-visual">
-      <SwiperSlide class="swiper-slide">
-          <a href="#" class="sw-visual-1"></a>
-        </SwiperSlide>
-        <SwiperSlide class="swiper-slide">
-          <a href="#" class="sw-visual-2"></a>
-        </SwiperSlide>
-        <SwiperSlide class="swiper-slide">
-          <a href="#" class="sw-visual-3"></a>
-        </SwiperSlide>
-        <SwiperSlide class="swiper-slide">
-          <a href="#" class="sw-visual-4"></a>
-        </SwiperSlide>
-    </Swiper>
+    <Swiper 
+    :modules = "modules" 
+    :autoplay = "{
+      delay: 1000,
+      disableOnInteraction: false,
+    }" 
+    :loop = "true" 
+    :navigation = "{
+      prevEl : '.sw-visual-prev',
+      nextEl : '.sw-visual-next'
+    }" class="sw-visual">
 
-    <div class="swiper-container sw-visual">
-      <!-- 슬라이드 좌우버튼 -->
+      <SwiperSlide class="swiper-slide">
+        <a href="#" class="sw-visual-1"></a>
+      </SwiperSlide>
+      <SwiperSlide class="swiper-slide">
+        <a href="#" class="sw-visual-2"></a>
+      </SwiperSlide>
+      <SwiperSlide class="swiper-slide">
+        <a href="#" class="sw-visual-3"></a>
+      </SwiperSlide>
+      <SwiperSlide class="swiper-slide">
+        <a href="#" class="sw-visual-4"></a>
+      </SwiperSlide>
+
       <button class="sw-visual-prev"></button>
       <button class="sw-visual-next"></button>
-    </div>
+    </Swiper>
+
   </section>
 </template>
 
 <script>
-  import{Autoplay, Navigation, Pagination} from 'swiper';
-  import{Swiper, SwiperSlide} from 'swiper/vue';
+  import { Autoplay, Navigation } from 'swiper'
+  import { Swiper, SwiperSlide } from 'swiper/vue';
   import 'swiper/css';
   import 'swiper/css/navigation';
-  import 'swiper/css/pagination';
-  import {onMounted} from 'vue';
-  // import $ from 'jquery';
   export default {
-    components : {
+    components: {
       Swiper,
       SwiperSlide
     },
-
     setup() {
-      onMounted(() => {
-
-        // visual 슬라이드
-        new Swiper('.sw-visual', {
-          loop: true,
-          autoplay: {
-            delay: 1000,
-            disableOnInteraction: false,
-          },
-          speed: 1000,
-          navigation: {
-            prevEl: '.sw-visual-prev',
-            nextEl: '.sw-visual-next'
-          }
-        });
-      })
       return {
-        modules: [Navigation, Pagination, Autoplay]
+        modules: [Autoplay, Navigation]
+
       }
     }
   }

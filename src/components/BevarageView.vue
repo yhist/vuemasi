@@ -6,41 +6,71 @@
         <span>마시그래이의 다양한 메뉴를 맛보세요</span>
       </div>
       <!-- Bevarage 슬라이드  -->
-      <div class="swiper-container sw-bevarage">
-        <!-- 슬라이드내용 -->
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
+      <Swiper 
+        class="sw-bevarage"
+        :modules="modules"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction:false,
+        }"
+        :loop = "true"
+        :speed = "800"
+        :navigation="{
+          prevEl:'.sw-items-prev',
+          nextEl:'.sw-items-next'
+        }"
+        :pagination="{
+          el: '.sw-bevarage-pg',
+          type: 'fraction'
+        }"
+      >
+          <SwiperSlide class="swiper-slide">
             <a href="#">
-              <img src="images/menu_slide01.png" alt="">
+              <img :src="require('@/assets/images/menu_slide01.png')" alt="">
             </a>
-          </div>
-          <div class="swiper-slide">
+          </SwiperSlide>
+          <SwiperSlide class="swiper-slide">
             <a href="#">
-              <img src="images/menu_slide02.png" alt="">
+              <img :src="require('@/assets/images/menu_slide02.png')" alt="">
             </a>
-          </div>
-          <div class="swiper-slide">
+          </SwiperSlide>
+          <SwiperSlide class="swiper-slide">
             <a href="#">
-              <img src="images/menu_slide03.png" alt="">
+              <img :src="require('@/assets/images/menu_slide03.png')" alt="">
             </a>
-          </div>
-        </div>
-        <!-- 좌우버튼 -->
+          </SwiperSlide>
+
+          <!-- 좌우버튼 -->
         <button class="sw-bevarage-prev"></button>
         <button class="sw-bevarage-next"></button>
         <!-- 컨트롤 -->
         <div class="sw-bevarage-control">
           <div class="sw-bevarage-pg"></div>
         </div>
-      </div>
+      </Swiper>
+
 
     </div>
   </section>
 </template>
 
 <script>
+  import {Autoplay, Navigation, Pagination} from 'swiper';
+  import {Swiper, SwiperSlide} from 'swiper/vue';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+  
   export default {
-
+    components: {
+      Swiper, 
+      SwiperSlide
+    },
+      setup() {
+        return{
+          modules: [Autoplay, Navigation, Pagination]
+        }
+      }
   }
 </script>
 

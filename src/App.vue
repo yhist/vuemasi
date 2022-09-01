@@ -14,6 +14,7 @@
 </template>
 
 <script>
+
 import GoTop from '@/components/GoTop.vue'
 import MobilMenu from '@/components/MobilMenu.vue'
 import FixMenu from '@/components/FixMenu.vue'
@@ -26,6 +27,7 @@ import SnsView from '@/components/SnsView.vue'
 import FooterView from '@/components/FooterView.vue'
 
 export default {
+  name: 'App',
   components: {
     GoTop,
     MobilMenu,
@@ -37,6 +39,11 @@ export default {
     FranchiserView,
     SnsView,
     FooterView
+  },
+  setup(){
+ 
+    return{
+    }
   }
 }
 </script>

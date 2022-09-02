@@ -1,25 +1,36 @@
 <template>
-  <section class="franchiser">
-    <div class="inner">
-      <div class="franchiser-top">
-        <h2>MASIGRAY <b>Franchiser</b></h2>
-        <span>마시그래이 신규 매장</span>
-      </div>
-      <ul class="franchiser-list clearfix">
-        <li id="store-1">
-        </li>
-        <li id="store-2">
-        </li>
-        <li id="store-3">
-        </li>
-        <li id="store-4">
-        </li>
-      </ul>
+  <!-- franchiser -->
+<section class="franchiser">
+  <div class="inner">
+    <div class="franchiser-top">
+      <h2>MASIGRAY <b>Franchiser</b></h2>
+      <span>마시그래이 신규 매장</span>
     </div>
-  </section>
+    <ul class="franchiser-list clearfix">
+      <li>
+        <a href="#"><img :src="require('@/assets/images/프랜차이즈1.jpg')" alt="">
+          <span>합천점</span></a>
+      </li>
+      <li>
+        <a href="#"><img :src="require('@/assets/images/프랜차이즈2.jpg')" alt="">
+          <span>신천점</span></a>
+      </li>
+      <li>
+        <a href="#"><img :src="require('@/assets/images/프랜차이즈3.jpg')" alt="">
+          <span>복현 푸르지오점</span></a>
+      </li>
+      <li>
+        <a href="#"><img :src="require('@/assets/images/프랜차이즈4.jpg')" alt="">
+          <span>대곡역점</span></a>
+      </li>
+    </ul>
+  </div>
+</section>
 </template>
 
+
 <script>
+  
   export default {
     
   }

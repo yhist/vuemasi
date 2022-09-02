@@ -26,6 +26,11 @@ import FranchiserView from '@/components/FranchiserView.vue'
 import SnsView from '@/components/SnsView.vue'
 import FooterView from '@/components/FooterView.vue'
 
+// 공통으로 관리되는 state를 참조한다.
+// 여기서는 actions를 호출하는 용도로 사용.
+// vuex를 참ㅈ하는 객체를 접근하려고 하면
+// 아래 구문으로 접근한다.
+import { useStore } from 'vuex'
 export default {
   name: 'App',
   components: {
@@ -41,7 +46,11 @@ export default {
     FooterView
   },
   setup(){
- 
+    const store = useStore();
+    // actins의 메소드를 사용할때
+    //store.dispath('매소드면')
+    // console.log('step1: dispatch');
+    store.dispatch('fetchMenudata');
     return{
     }
   }
@@ -50,7 +59,6 @@ export default {
 
 <style>
 @charset 'utf-8';
-
 
 * {
   margin: 0;

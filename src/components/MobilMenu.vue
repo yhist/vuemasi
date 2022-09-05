@@ -32,7 +32,7 @@
 </template>
 
 <script>
-  import {computed, onMounted} from 'vue';
+  import {computed, onUpdated} from 'vue';
   import $ from 'jquery';
   import { useStore } from 'vuex';
 
@@ -43,14 +43,20 @@
       const menudata = computed(() => store.getters.getMenuData)
 
 
-      onMounted(() => {
+      onUpdated(() => {
         // 모바일 메뉴 기능
         // 1. 펼침메뉴 기능
         // let mb_menu_li = $('.mb-menu > li');
         let mb_mainmenu = $('.mb-menu > li > a');
         let mb_submenu = $('.mb-submenu');
 
+
         $.each(mb_mainmenu, function (index) {
+          
+          $(this).on('click', function(event){
+            event.preventDefault();
+          })
+
           $(this).click(function (event) {
             // href 를 막아준다.
             event.preventDefault();
@@ -123,6 +129,8 @@
           }
         });
       })
+      
+
       return {
         menudata
       }

@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import {computed, onMounted} from 'vue';
+import {computed, onUpdated} from 'vue';
 import $ from 'jquery';
 import { useStore } from 'vuex';
 
@@ -46,7 +46,7 @@ export default {
   // vuex의 state의 변화 감시
   const menudata = computed(() => store.getters.getMenuData);
 
-  onMounted(() => {
+  onUpdated(() => {
   // 메인 메뉴 기능
   let header = $('.header');
   let header_top = $('.header-top');

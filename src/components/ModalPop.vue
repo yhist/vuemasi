@@ -5,7 +5,7 @@
       <div class="modal-icon">
         <i class="fas fa-exclamation-triangle"></i>
       </div>
-      <h1>노엘로힐스 클론코딩</h1>
+      <h1>마시그래이 클론코딩</h1>
       <p>
         이 사이트는 <strong>스터디용으로 제작</strong>되었으며 <br />
         <strong>모든 리소스의 저작권은 원저작자</strong>에게 있습니다. <br />
@@ -16,7 +16,7 @@
           >* 본 사이트는 <strong>Chrome</strong> 에 최적화되어 있습니다.</span
         >
         <span
-          >*해당 사이트 관련 문제사항이 있을시 연락해주시면
+          >* 해당 사이트 관련 문제사항이 있을시 연락해주시면
           삭제하겠습니다.</span
         >
         <div class="modal-bottom-icon">

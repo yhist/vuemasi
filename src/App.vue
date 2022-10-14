@@ -1,4 +1,5 @@
 <template>
+  <ModalPop/>
   <div class="wrap">
   <GoTop />
   <MobilMenu />
@@ -31,6 +32,7 @@ import FooterView from '@/components/FooterView.vue'
 // vuex를 참ㅈ하는 객체를 접근하려고 하면
 // 아래 구문으로 접근한다.
 import { useStore } from 'vuex'
+import ModalPop from './components/ModalPop.vue'
 export default {
   name: 'App',
   components: {
@@ -43,8 +45,9 @@ export default {
     BevarageView,
     FranchiserView,
     SnsView,
-    FooterView
-  },
+    FooterView,
+    ModalPop
+},
   setup(){
     const store = useStore();
     // actins의 메소드를 사용할때
